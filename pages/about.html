@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" id="html-root">
 
 <head>
   <meta charset="UTF-8">
@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
     rel="stylesheet">
 
   <!-- Lucide Icons -->
@@ -34,6 +34,9 @@
   <!-- Styles -->
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="stylesheet" href="../styles/about.css">
+
+  <!-- Translations -->
+  <script src="../scripts/translations.js"></script>
 </head>
 
 <body>
@@ -46,16 +49,20 @@
       </div>
 
       <div class="nav-menu" id="nav-menu">
-        <a href="../index.html#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link active">About</a>
-        <a href="./products.html" class="nav-link">Products</a>
-        <a href="../index.html#services" class="nav-link">Export Services</a>
-        <a href="../index.html#certifications" class="nav-link">Certifications</a>
-        <a href="../index.html#contact" class="nav-link">Contact</a>
+        <a href="../index.html#home" class="nav-link" data-translate="nav.home">Home</a>
+        <a href="#about" class="nav-link active" data-translate="nav.about">About</a>
+        <a href="./products.html" class="nav-link" data-translate="nav.products">Products</a>
+        <a href="../index.html#services" class="nav-link" data-translate="nav.services">Export Services</a>
+        <a href="../index.html#certifications" class="nav-link" data-translate="nav.certifications">Certifications</a>
+        <a href="../index.html#contact" class="nav-link" data-translate="nav.contact">Contact</a>
       </div>
 
       <div class="nav-actions">
-        <a href="../index.html#contact" class="btn btn-primary">Get Quote</a>
+        <div class="language-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ar">العربية</button>
+        </div>
+        <a href="../index.html#contact" class="btn btn-primary" data-translate="nav.getQuote">Get Quote</a>
         <button class="nav-toggle" id="nav-toggle">
           <i data-lucide="menu"></i>
         </button>
@@ -73,8 +80,8 @@
     <div class="hero-content">
       <div class="container">
         <div class="hero-text">
-          <h1 class="hero-title">About ELShahd</h1>
-          <p class="hero-subtitle">
+          <h1 class="hero-title" data-translate="about.hero.title">About ELShahd</h1>
+          <p class="hero-subtitle" data-translate="about.hero.subtitle">
             Your trusted partner in premium agricultural exports, connecting Egyptian farms to global markets with
             quality, reliability, and integrity.
           </p>
@@ -88,17 +95,17 @@
     <div class="container">
       <div class="overview-content">
         <div class="overview-text">
-          <h2>Leading the Future of Agricultural Exports</h2>
-          <p class="lead-text">
+          <h2 data-translate="about.overview.title">Leading the Future of Agricultural Exports</h2>
+          <p class="lead-text" data-translate="about.overview.lead">
             ELShahd stands at the forefront of Egypt's agricultural export industry, specializing in premium animal feed
             products and fresh fruits that meet the highest international standards.
           </p>
-          <p>
+          <p data-translate="about.overview.vision">
             Founded with a vision to bridge Egyptian agricultural excellence with global market demands, we have
             established ourselves as a trusted partner for livestock farmers, agricultural businesses, and importers
             worldwide. Our commitment to quality, sustainability, and customer satisfaction drives everything we do.
           </p>
-          <p>
+          <p data-translate="about.overview.focus">
             With 80% of our focus on animal feed products including straw, dried alfalfa, hay, and chaff, complemented
             by 20% premium fresh fruits, we offer a comprehensive range of agricultural products that support livestock
             nutrition and global food systems.
@@ -111,7 +118,7 @@
               <i data-lucide="globe"></i>
             </div>
             <div class="stat-number">20+</div>
-            <div class="stat-label">Countries Served</div>
+            <div class="stat-label" data-translate="about.stats.countries">Countries Served</div>
           </div>
 
           <div class="stat-card">
@@ -119,7 +126,7 @@
               <i data-lucide="truck"></i>
             </div>
             <div class="stat-number">1000+</div>
-            <div class="stat-label">Shipments Delivered</div>
+            <div class="stat-label" data-translate="about.stats.shipments">Shipments Delivered</div>
           </div>
 
           <div class="stat-card">
@@ -127,7 +134,7 @@
               <i data-lucide="users"></i>
             </div>
             <div class="stat-number">500+</div>
-            <div class="stat-label">Satisfied Clients</div>
+            <div class="stat-label" data-translate="about.stats.clients">Satisfied Clients</div>
           </div>
 
           <div class="stat-card">
@@ -135,7 +142,7 @@
               <i data-lucide="award"></i>
             </div>
             <div class="stat-number">5+</div>
-            <div class="stat-label">Years of Excellence</div>
+            <div class="stat-label" data-translate="about.stats.years">Years of Excellence</div>
           </div>
         </div>
       </div>
@@ -150,16 +157,16 @@
           <div class="card-icon">
             <i data-lucide="target"></i>
           </div>
-          <h3>Our Mission</h3>
-          <p>
+          <h3 data-translate="about.mission.title">Our Mission</h3>
+          <p data-translate="about.mission.description">
             To provide premium agricultural products that enhance livestock nutrition and support sustainable farming
             practices worldwide, while maintaining the highest standards of quality, reliability, and customer service.
           </p>
           <ul class="mission-points">
-            <li>Deliver exceptional quality products</li>
-            <li>Build lasting partnerships with clients</li>
-            <li>Support sustainable agriculture</li>
-            <li>Foster innovation in export processes</li>
+            <li data-translate="about.mission.points.quality">Deliver exceptional quality products</li>
+            <li data-translate="about.mission.points.partnerships">Build lasting partnerships with clients</li>
+            <li data-translate="about.mission.points.sustainability">Support sustainable agriculture</li>
+            <li data-translate="about.mission.points.innovation">Foster innovation in export processes</li>
           </ul>
         </div>
 
@@ -545,6 +552,28 @@
                 Info@elshahd-company.com
               </li>
             </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4 class="footer-title" data-translate="footer.social">Follow Us</h4>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/company/el-shahd-company/" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="LinkedIn">
+                <i data-lucide="linkedin"></i>
+              </a>
+              <a href="https://web.facebook.com/elshahd200" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="Facebook">
+                <i data-lucide="facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/el_shahd_company/" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="Instagram">
+                <i data-lucide="instagram"></i>
+              </a>
+              <a href="https://www.youtube.com/channel/UCUBsBpSyLsjNb6MSfwDb_1Q" target="_blank"
+                rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+                <i data-lucide="youtube"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>

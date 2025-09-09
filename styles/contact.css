@@ -158,8 +158,8 @@
 
 .form-content {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 64px;
+  grid-template-columns: 1fr;
+  gap: 48px;
   align-items: start;
 }
 
@@ -509,8 +509,7 @@
   }
 
   .form-content {
-    grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
   }
 
   .contact-methods-grid {
@@ -676,4 +675,127 @@
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+/* RTL Support for Contact Page */
+html[lang="ar"] .contact-methods-grid {
+  direction: rtl;
+}
+
+html[lang="ar"] .contact-method {
+  text-align: right;
+}
+
+html[lang="ar"] .form-content {
+  direction: rtl;
+}
+
+html[lang="ar"] .form-info {
+  text-align: right;
+}
+
+html[lang="ar"] .benefit-item {
+  flex-direction: row-reverse;
+}
+
+html[lang="ar"] .support-contact {
+  align-items: flex-end;
+}
+
+html[lang="ar"] .support-link {
+  flex-direction: row-reverse;
+}
+
+html[lang="ar"] .form-container {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="ar"] .form-header {
+  text-align: center;
+}
+
+html[lang="ar"] .form-section .section-title {
+  flex-direction: row-reverse;
+}
+
+html[lang="ar"] .form-row {
+  direction: rtl;
+}
+
+html[lang="ar"] .form-group label {
+  text-align: right;
+}
+
+html[lang="ar"] .form-group input,
+html[lang="ar"] .form-group select,
+html[lang="ar"] .form-group textarea {
+  text-align: right;
+}
+
+html[lang="ar"] .map-info {
+  text-align: right;
+}
+
+html[lang="ar"] .map-info p {
+  flex-direction: row-reverse;
+}
+
+html[lang="ar"] .faq-question {
+  flex-direction: row-reverse;
+}
+
+html[lang="ar"] .faq-question h4 {
+  text-align: right;
+  padding-left: 16px;
+  padding-right: 0;
+}
+
+html[lang="ar"] .faq-answer p {
+  text-align: right;
+}
+
+html[lang="ar"] .method-actions {
+  direction: rtl;
+}
+
+html[lang="ar"] .method-hours {
+  direction: rtl;
+}
+
+html[lang="ar"] .method-hours small {
+  flex-direction: row-reverse;
+}
+
+html[lang="ar"] .map-actions {
+  direction: rtl;
+}
+
+html[lang="ar"] .footer-content {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="ar"] .footer-brand {
+  text-align: right;
+}
+
+html[lang="ar"] .footer-links {
+  direction: rtl;
+}
+
+html[lang="ar"] .footer-column {
+  text-align: right;
+}
+
+html[lang="ar"] .footer-menu {
+  text-align: right;
+}
+
+html[lang="ar"] .footer-bottom {
+  direction: rtl;
+}
+
+html[lang="ar"] .footer-legal {
+  order: -1;
 }

@@ -1,51 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<div class="nav-menu" id="nav-menu">
-  <a href="#home" class="nav-link">Home</a>
-  <a href="./pages/about.html" class="nav-link">About</a>
-  <a href="./pages/products.html" class="nav-link">Products</a>
-  <a href="#services" class="nav-link">Export Services</a>
-  <a href="#certifications" class="nav-link">Certifications</a>
-  <a href="./pages/contact.html" class="nav-link">Contact</a>
-</div>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ELShahd - Premium Animal Feed & Agricultural Exports | Egypt</title>
-<meta name="description"
-  content="ELShahd specializes in exporting premium animal feed including straw, dried alfalfa, hay, and chaff, plus fresh fruits. Leading Egyptian agricultural export company serving global markets.">
-<meta name="keywords"
-  content="animal feed export, straw export, alfalfa export, hay export, agricultural exports Egypt, livestock feed, fruits export">
+<html lang="en" dir="ltr" id="html-root">
 
-<!-- Open Graph Meta Tags -->
-<meta property="og:title" content="ELShahd - Premium Animal Feed & Agricultural Exports">
-<meta property="og:description"
-  content="Leading Egyptian exporter of premium animal feed and agricultural products to global markets">
-<meta property="og:image" content="./images/cover.jpg">
-<meta property="og:url" content="https://elshahd-company.com">
-<meta property="og:type" content="website">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELShahd - Premium Animal Feed & Agricultural Exports | Egypt</title>
+  <meta name="description"
+    content="ELShahd specializes in exporting premium animal feed including straw, dried alfalfa, hay, and chaff, plus fresh fruits. Leading Egyptian agricultural export company serving global markets.">
+  <meta name="keywords"
+    content="animal feed export, straw export, alfalfa export, hay export, agricultural exports Egypt, livestock feed, fruits export">
 
-<!-- Twitter Card Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ELShahd - Premium Animal Feed & Agricultural Exports">
-<meta name="twitter:description"
-  content="Leading Egyptian exporter of premium animal feed and agricultural products to global markets">
-<meta name="twitter:image" content="./images/cover.jpg">
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="ELShahd - Premium Animal Feed & Agricultural Exports">
+  <meta property="og:description"
+    content="Leading Egyptian exporter of premium animal feed and agricultural products to global markets">
+  <meta property="og:image" content="./images/cover.jpg">
+  <meta property="og:url" content="https://elshahd-company.com">
+  <meta property="og:type" content="website">
 
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="./images/logo.jpg">
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ELShahd - Premium Animal Feed & Agricultural Exports">
+  <meta name="twitter:description"
+    content="Leading Egyptian exporter of premium animal feed and agricultural products to global markets">
+  <meta name="twitter:image" content="./images/cover.jpg">
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
-  rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./images/logo.jpg">
 
-<!-- Lucide Icons -->
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
 
-<!-- Styles -->
-<link rel="stylesheet" href="./styles/main.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles/main.css">
+
+  <!-- Translations -->
+  <script src="./scripts/translations.js"></script>
 </head>
 
 <body>
@@ -58,17 +55,21 @@
       </div>
 
       <div class="nav-menu" id="nav-menu">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#products" class="nav-link">Products</a>
-        <a href="#services" class="nav-link">Export Services</a>
-        <a href="#certifications" class="nav-link">Certifications</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <a href="./pages/products.html" class="nav-link">All Products</a>
+        <a href="#home" class="nav-link active" data-translate="nav.home">Home</a>
+        <a href="#about" class="nav-link" data-translate="nav.about">About</a>
+        <a href="#products" class="nav-link" data-translate="nav.products">Products</a>
+        <a href="#services" class="nav-link" data-translate="nav.services">Export Services</a>
+        <a href="#certifications" class="nav-link" data-translate="nav.certifications">Certifications</a>
+        <a href="#contact" class="nav-link" data-translate="nav.contact">Contact</a>
+        <a href="./pages/products.html" class="nav-link" data-translate="nav.allProducts">All Products</a>
       </div>
 
       <div class="nav-actions">
-        <a href="#contact" class="btn btn-primary">Get Quote</a>
+        <div class="language-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ar">العربية</button>
+        </div>
+        <a href="#contact" class="btn btn-primary" data-translate="nav.getQuote">Get Quote</a>
         <button class="nav-toggle" id="nav-toggle">
           <i data-lucide="menu"></i>
         </button>
@@ -86,30 +87,34 @@
     <div class="hero-content">
       <div class="container">
         <div class="hero-text">
-          <h1 class="hero-title">
+          <h1 class="hero-title" data-translate-html="hero.title">
             Premium <span class="text-accent">Animal Feed</span> & Agricultural Exports
           </h1>
-          <p class="hero-subtitle">
+          <p class="hero-subtitle" data-translate="hero.subtitle">
             Leading Egyptian exporter of high-quality straw, dried alfalfa, hay, chaff, and fresh fruits to global
-            markets. Trusted by livestock farmers worldwide.
+            markets. Your trusted partner in agricultural excellence.
           </p>
           <div class="hero-stats">
             <div class="stat-item">
-              <div class="stat-number">80%</div>
-              <div class="stat-label">Animal Feed Focus</div>
+              <div class="stat-number">25+</div>
+              <div class="stat-label" data-translate="hero.stats.experience">Years of Excellence</div>
             </div>
             <div class="stat-item">
-              <div class="stat-number">20+</div>
-              <div class="stat-label">Countries Served</div>
+              <div class="stat-number">30+</div>
+              <div class="stat-label" data-translate="hero.stats.countries">Countries Served</div>
             </div>
             <div class="stat-item">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Quality Guaranteed</div>
+              <div class="stat-number">50+</div>
+              <div class="stat-label" data-translate="hero.stats.products">Premium Products</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">1000+</div>
+              <div class="stat-label" data-translate="hero.stats.clients">Satisfied Clients</div>
             </div>
           </div>
           <div class="hero-actions">
-            <a href="#products" class="btn btn-primary btn-lg">View Our Products</a>
-            <a href="#contact" class="btn btn-outline btn-lg">Request Quote</a>
+            <a href="#products" class="btn btn-primary btn-lg" data-translate="hero.cta">View Our Products</a>
+            <a href="#contact" class="btn btn-outline btn-lg" data-translate="nav.getQuote">Get Quote</a>
           </div>
         </div>
       </div>
@@ -120,43 +125,48 @@
   <section class="about" id="about">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">About ELShahd</h2>
-        <p class="section-subtitle">Your trusted partner in agricultural exports</p>
+        <span class="section-badge" data-translate="about.badge">About ELShahd</span>
+        <h2 class="section-title" data-translate="about.title">Your Trusted Partner in Agricultural Excellence</h2>
+        <p class="section-subtitle" data-translate="about.description">With decades of experience in agricultural
+          exports, ELShahd has established itself as a leading supplier of premium animal feed and fresh produce. We
+          serve international markets with unwavering commitment to quality, reliability, and customer satisfaction.
+        </p>
       </div>
 
       <div class="about-content">
         <div class="about-text">
-          <h3>Leading Agricultural Export Company</h3>
-          <p>
-            ELShahd is a modern, trustworthy Egyptian company specializing in the export of premium animal feed products
-            and fresh fruits. With our primary focus on animal feed (80% of our business), we have established ourselves
-            as a reliable supplier to livestock farmers and agricultural businesses worldwide.
-          </p>
-          <p>
-            Our commitment to quality, reliability, and customer satisfaction has made us a preferred partner for
-            international clients seeking consistent, high-grade agricultural products.
+          <h3 data-translate="about.title">Your Trusted Partner in Agricultural Excellence</h3>
+          <p data-translate="about.description">
+            With decades of experience in agricultural exports, ELShahd has established itself as a leading supplier
+            of
+            premium animal feed and fresh produce. We serve international markets with unwavering commitment to
+            quality,
+            reliability, and customer satisfaction.
           </p>
 
           <div class="about-features">
             <div class="feature-item">
               <i data-lucide="shield-check" class="feature-icon"></i>
               <div class="feature-content">
-                <h4>Quality Assured</h4>
-                <p>All products meet international quality standards</p>
+                <h4 data-translate="about.features.0.title">Quality Assurance</h4>
+                <p data-translate="about.features.0.description">Rigorous quality control ensures every shipment meets
+                  international standards</p>
               </div>
             </div>
             <div class="feature-item">
               <i data-lucide="truck" class="feature-icon"></i>
               <div class="feature-content">
-                <h4>Reliable Logistics</h4>
-                <p>Efficient export and shipping solutions</p>
+                <h4 data-translate="about.features.1.title">Global Reach</h4>
+                <p data-translate="about.features.1.description">Serving customers across multiple continents with
+                  reliable logistics</p>
               </div>
             </div>
             <div class="feature-item">
               <i data-lucide="globe" class="feature-icon"></i>
               <div class="feature-content">
-                <h4>Global Reach</h4>
-                <p>Serving markets across multiple continents</p>
+                <h4 data-translate="about.features.2.title">Expert Team</h4>
+                <p data-translate="about.features.2.description">Experienced professionals dedicated to agricultural
+                  excellence</p>
               </div>
             </div>
           </div>
@@ -173,15 +183,17 @@
   <section class="products" id="products">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Our Products</h2>
-        <p class="section-subtitle">Premium quality agricultural products for global markets</p>
+        <span class="section-badge" data-translate="products.badge">Our Products</span>
+        <h2 class="section-title" data-translate="products.title">Premium Animal Feed & Fresh Produce</h2>
+        <p class="section-subtitle" data-translate="products.subtitle">Discover our comprehensive range of
+          high-quality agricultural products, carefully selected and processed to meet international standards.</p>
       </div>
 
       <!-- Primary Products (Animal Feed) -->
       <div class="product-category">
         <h3 class="category-title">
           <i data-lucide="wheat" class="category-icon"></i>
-          Animal Feed Products (Primary Focus - 80%)
+          <span data-translate="products.categories.animalFeed">Animal Feed</span> (Primary Focus - 80%)
         </h3>
 
         <div class="products-grid">
@@ -191,9 +203,9 @@
               <div class="product-badge">Best Seller</div>
             </div>
             <div class="product-content">
-              <h4 class="product-title">Premium Straw</h4>
-              <p class="product-description">High-quality wheat and rice straw, perfect for livestock bedding and feed
-                supplement.</p>
+              <h4 class="product-title" data-translate="products.items.straw.title">Premium Straw</h4>
+              <p class="product-description" data-translate="products.items.straw.description">High-quality wheat and
+                rice straw, perfect for livestock bedding and feed supplement.</p>
               <div class="product-features">
                 <span class="feature-tag">Moisture Controlled</span>
                 <span class="feature-tag">Export Grade</span>
@@ -206,9 +218,9 @@
               <img src="./images/animal feed/item 2.jpg" alt="Dried Alfalfa" class="product-img">
             </div>
             <div class="product-content">
-              <h4 class="product-title">Dried Alfalfa</h4>
-              <p class="product-description">Nutrient-rich dried alfalfa, excellent source of protein and fiber for
-                livestock.</p>
+              <h4 class="product-title" data-translate="products.items.alfalfa.title">Dried Alfalfa</h4>
+              <p class="product-description" data-translate="products.items.alfalfa.description">Nutrient-rich dried
+                alfalfa, excellent source of protein and fiber for livestock.</p>
               <div class="product-features">
                 <span class="feature-tag">High Protein</span>
                 <span class="feature-tag">Sun Dried</span>
@@ -221,8 +233,9 @@
               <img src="./images/animal feed/item 3.jpg" alt="Premium Hay" class="product-img">
             </div>
             <div class="product-content">
-              <h4 class="product-title">Premium Hay</h4>
-              <p class="product-description">Top-grade hay with optimal nutritional value for dairy and beef cattle.</p>
+              <h4 class="product-title" data-translate="products.items.hay.title">Premium Hay</h4>
+              <p class="product-description" data-translate="products.items.hay.description">Top-grade hay varieties
+                providing essential nutrition for cattle and horses.</p>
               <div class="product-features">
                 <span class="feature-tag">Grade A</span>
                 <span class="feature-tag">Nutritious</span>
@@ -235,9 +248,9 @@
               <img src="./images/animal feed/item 4.jpg" alt="Quality Chaff" class="product-img">
             </div>
             <div class="product-content">
-              <h4 class="product-title">Quality Chaff</h4>
-              <p class="product-description">Finely processed chaff suitable for various livestock feeding requirements.
-              </p>
+              <h4 class="product-title" data-translate="products.items.chaff.title">Quality Chaff</h4>
+              <p class="product-description" data-translate="products.items.chaff.description">Fine chaff perfect for
+                mixing with other feeds and improving digestibility.</p>
               <div class="product-features">
                 <span class="feature-tag">Fine Cut</span>
                 <span class="feature-tag">Clean</span>
@@ -251,7 +264,7 @@
       <div class="product-category">
         <h3 class="category-title">
           <i data-lucide="apple" class="category-icon"></i>
-          Fresh Fruits (Secondary Focus - 20%)
+          <span data-translate="products.categories.fruits">Fresh Fruits</span> (Secondary Focus - 20%)
         </h3>
 
         <div class="products-grid">
@@ -260,8 +273,9 @@
               <img src="./images/fruits/item 1.jpg" alt="Fresh Fruits" class="product-img">
             </div>
             <div class="product-content">
-              <h4 class="product-title">Premium Citrus</h4>
-              <p class="product-description">Fresh oranges, lemons, and other citrus fruits from Egyptian orchards.</p>
+              <h4 class="product-title" data-translate="products.items.citrus.title">Premium Citrus</h4>
+              <p class="product-description" data-translate="products.items.citrus.description">Fresh oranges, lemons,
+                and other citrus fruits from Egyptian orchards.</p>
               <div class="product-features">
                 <span class="feature-tag">Fresh</span>
                 <span class="feature-tag">Export Quality</span>
@@ -274,8 +288,9 @@
               <img src="./images/fruits/item 2.jpg" alt="Seasonal Fruits" class="product-img">
             </div>
             <div class="product-content">
-              <h4 class="product-title">Seasonal Fruits</h4>
-              <p class="product-description">A variety of seasonal fruits including grapes, pomegranates, and dates.</p>
+              <h4 class="product-title" data-translate="products.items.seasonal.title">Seasonal Fruits</h4>
+              <p class="product-description" data-translate="products.items.seasonal.description">A variety of
+                seasonal fruits including grapes, pomegranates, and dates.</p>
               <div class="product-features">
                 <span class="feature-tag">Seasonal</span>
                 <span class="feature-tag">Premium</span>
@@ -286,7 +301,8 @@
       </div>
 
       <div class="products-cta">
-        <a href="./pages/products.html" class="btn btn-accent btn-lg">View All Products</a>
+        <a href="./pages/products.html" class="btn btn-accent btn-lg" data-translate="products.viewAll">View All
+          Products</a>
       </div>
     </div>
   </section>
@@ -295,8 +311,10 @@
   <section class="services" id="services">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Export Services</h2>
-        <p class="section-subtitle">Comprehensive export solutions for international clients</p>
+        <span class="section-badge" data-translate="services.badge">Export Services</span>
+        <h2 class="section-title" data-translate="services.title">Comprehensive Export Solutions</h2>
+        <p class="section-subtitle" data-translate="services.subtitle">End-to-end export services ensuring your
+          products reach global markets efficiently and safely.</p>
       </div>
 
       <div class="services-grid">
@@ -304,9 +322,9 @@
           <div class="service-icon">
             <i data-lucide="package-check"></i>
           </div>
-          <h3 class="service-title">Quality Control</h3>
-          <p class="service-description">Rigorous quality testing and certification to ensure all products meet
-            international standards.</p>
+          <h3 class="service-title" data-translate="services.items.0.title">Quality Control</h3>
+          <p class="service-description" data-translate="services.items.0.description">Comprehensive testing and
+            quality assurance for all products before shipment.</p>
           <ul class="service-features">
             <li>Pre-shipment inspection</li>
             <li>Quality certificates</li>
@@ -318,9 +336,9 @@
           <div class="service-icon">
             <i data-lucide="ship"></i>
           </div>
-          <h3 class="service-title">Shipping & Logistics</h3>
-          <p class="service-description">Efficient shipping solutions with reliable delivery schedules to ports
-            worldwide.</p>
+          <h3 class="service-title" data-translate="services.items.2.title">Logistics & Shipping</h3>
+          <p class="service-description" data-translate="services.items.2.description">Reliable shipping arrangements
+            with trusted global logistics partners.</p>
           <ul class="service-features">
             <li>Container shipping</li>
             <li>Bulk cargo handling</li>
@@ -332,8 +350,9 @@
           <div class="service-icon">
             <i data-lucide="file-text"></i>
           </div>
-          <h3 class="service-title">Documentation</h3>
-          <p class="service-description">Complete export documentation and customs clearance assistance.</p>
+          <h3 class="service-title" data-translate="services.items.3.title">Documentation</h3>
+          <p class="service-description" data-translate="services.items.3.description">Complete export documentation
+            and regulatory compliance support.</p>
           <ul class="service-features">
             <li>Export licenses</li>
             <li>Customs clearance</li>
@@ -345,9 +364,9 @@
           <div class="service-icon">
             <i data-lucide="headphones"></i>
           </div>
-          <h3 class="service-title">Customer Support</h3>
-          <p class="service-description">Dedicated support team to assist with orders, tracking, and after-sales
-            service.</p>
+          <h3 class="service-title" data-translate="services.items.4.title">Custom Solutions</h3>
+          <p class="service-description" data-translate="services.items.4.description">Tailored export solutions to
+            meet your unique business requirements.</p>
           <ul class="service-features">
             <li>24/7 customer support</li>
             <li>Order tracking</li>
@@ -426,14 +445,17 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Contact Us</h2>
-        <p class="section-subtitle">Get in touch for quotes and inquiries</p>
+        <span class="section-badge" data-translate="contact.badge">Contact Us</span>
+        <h2 class="section-title" data-translate="contact.title">Let's Build Your Success Together</h2>
+        <p class="section-subtitle" data-translate="contact.subtitle">Ready to explore premium agricultural products?
+          Get in touch with our expert team for personalized solutions and competitive pricing.</p>
       </div>
 
       <div class="contact-content">
         <div class="contact-info">
-          <h3>Get In Touch</h3>
-          <p>Ready to place an order or need more information about our products? Contact our team today.</p>
+          <h3 data-translate="contact.title">Let's Build Your Success Together</h3>
+          <p data-translate="contact.subtitle">Ready to explore premium agricultural products? Get in touch with our
+            expert team for personalized solutions and competitive pricing.</p>
 
           <div class="contact-details">
             <div class="contact-item">
@@ -441,7 +463,8 @@
               <div class="contact-text">
                 <h4>Address</h4>
                 <p>71 Al Tajareen Towers – Abd El Aziz Hegazy Street<br>New Nozha, Cairo, Egypt</p>
-                <a href="https://maps.app.goo.gl/MRFic3Cj5KYsYKao7" target="_blank" class="contact-link">View on Map</a>
+                <a href="https://maps.app.goo.gl/MRFic3Cj5KYsYKao7" target="_blank" class="contact-link">View on
+                  Map</a>
               </div>
             </div>
 
@@ -467,37 +490,37 @@
 
         <div class="contact-form-container">
           <form class="contact-form" id="contact-form">
-            <h3>Request a Quote</h3>
+            <h3 data-translate="nav.getQuote">Request a Quote</h3>
 
             <div class="form-row">
               <div class="form-group">
-                <label for="firstName">First Name *</label>
+                <label for="firstName" data-translate="contact.form.firstName">First Name *</label>
                 <input type="text" id="firstName" name="firstName" required>
               </div>
               <div class="form-group">
-                <label for="lastName">Last Name *</label>
+                <label for="lastName" data-translate="contact.form.lastName">Last Name *</label>
                 <input type="text" id="lastName" name="lastName" required>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label for="email">Email Address *</label>
+                <label for="email" data-translate="contact.form.email">Email Address *</label>
                 <input type="email" id="email" name="email" required>
               </div>
               <div class="form-group">
-                <label for="phone">Phone Number</label>
+                <label for="phone" data-translate="contact.form.phone">Phone Number</label>
                 <input type="tel" id="phone" name="phone">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="company">Company Name</label>
+              <label for="company" data-translate="contact.form.company">Company Name</label>
               <input type="text" id="company" name="company">
             </div>
 
             <div class="form-group">
-              <label for="country">Country *</label>
+              <label for="country" data-translate="contact.form.country">Country *</label>
               <input type="text" id="country" name="country" required>
             </div>
 
@@ -557,36 +580,36 @@
             <img src="./images/logo.jpg" alt="ELShahd Logo" class="footer-logo-img">
             <span class="footer-brand-text">ELShahd</span>
           </div>
-          <p class="footer-description">
-            Leading Egyptian exporter of premium animal feed and agricultural products. Trusted by livestock farmers
-            worldwide for quality and reliability.
+          <p class="footer-description" data-translate="footer.description">
+            Leading Egyptian exporter of premium animal feed and agricultural products, serving global markets with
+            excellence since our establishment.
           </p>
         </div>
 
         <div class="footer-links">
           <div class="footer-column">
-            <h4 class="footer-title">Company</h4>
+            <h4 class="footer-title" data-translate="footer.quickLinks">Quick Links</h4>
             <ul class="footer-menu">
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#products">Products</a></li>
-              <li><a href="#services">Export Services</a></li>
-              <li><a href="#certifications">Certifications</a></li>
+              <li><a href="#about" data-translate="footer.links.about">About Us</a></li>
+              <li><a href="#products" data-translate="nav.products">Products</a></li>
+              <li><a href="#services" data-translate="footer.links.services">Export Services</a></li>
+              <li><a href="#certifications" data-translate="footer.links.certifications">Certifications</a></li>
             </ul>
           </div>
 
           <div class="footer-column">
-            <h4 class="footer-title">Products</h4>
+            <h4 class="footer-title" data-translate="footer.products">Products</h4>
             <ul class="footer-menu">
-              <li><a href="./pages/products.html#straw">Straw</a></li>
-              <li><a href="./pages/products.html#alfalfa">Dried Alfalfa</a></li>
-              <li><a href="./pages/products.html#hay">Premium Hay</a></li>
-              <li><a href="./pages/products.html#chaff">Quality Chaff</a></li>
-              <li><a href="./pages/products.html#fruits">Fresh Fruits</a></li>
+              <li><a href="./pages/products.html#straw" data-translate="footer.links.straw">Straw</a></li>
+              <li><a href="./pages/products.html#alfalfa" data-translate="footer.links.alfalfa">Dried Alfalfa</a></li>
+              <li><a href="./pages/products.html#hay" data-translate="footer.links.hay">Premium Hay</a></li>
+              <li><a href="./pages/products.html#chaff" data-translate="footer.links.chaff">Quality Chaff</a></li>
+              <li><a href="./pages/products.html#fruits" data-translate="footer.links.fruits">Fresh Fruits</a></li>
             </ul>
           </div>
 
           <div class="footer-column">
-            <h4 class="footer-title">Contact</h4>
+            <h4 class="footer-title" data-translate="footer.contact">Contact Info</h4>
             <ul class="footer-menu">
               <li>
                 <i data-lucide="map-pin"></i>
@@ -602,12 +625,34 @@
               </li>
             </ul>
           </div>
+
+          <div class="footer-column">
+            <h4 class="footer-title" data-translate="footer.social">Follow Us</h4>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/company/el-shahd-company/" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="LinkedIn">
+                <i data-lucide="linkedin"></i>
+              </a>
+              <a href="https://web.facebook.com/elshahd200" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="Facebook">
+                <i data-lucide="facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/el_shahd_company/" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="Instagram">
+                <i data-lucide="instagram"></i>
+              </a>
+              <a href="https://www.youtube.com/channel/UCUBsBpSyLsjNb6MSfwDb_1Q" target="_blank"
+                rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+                <i data-lucide="youtube"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div class="footer-copyright">
-          <p>&copy; 2025 ELShahd Company. All rights reserved.</p>
+          <p data-translate="footer.copyright">&copy; 2024 ELShahd. All rights reserved.</p>
         </div>
         <div class="footer-legal">
           <a href="#" class="footer-legal-link">Privacy Policy</a>

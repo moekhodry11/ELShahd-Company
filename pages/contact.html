@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" id="html-root">
 
 <head>
   <meta charset="UTF-8">
@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
     rel="stylesheet">
 
   <!-- Lucide Icons -->
@@ -34,6 +34,9 @@
   <!-- Styles -->
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="stylesheet" href="../styles/contact.css">
+
+  <!-- Translations -->
+  <script src="../scripts/translations.js"></script>
 </head>
 
 <body>
@@ -46,16 +49,20 @@
       </div>
 
       <div class="nav-menu" id="nav-menu">
-        <a href="../index.html#home" class="nav-link">Home</a>
-        <a href="./about.html" class="nav-link">About</a>
-        <a href="./products.html" class="nav-link">Products</a>
-        <a href="../index.html#services" class="nav-link">Export Services</a>
-        <a href="../index.html#certifications" class="nav-link">Certifications</a>
-        <a href="#contact" class="nav-link active">Contact</a>
+        <a href="../index.html#home" class="nav-link" data-translate="nav.home">Home</a>
+        <a href="./about.html" class="nav-link" data-translate="nav.about">About</a>
+        <a href="./products.html" class="nav-link" data-translate="nav.products">Products</a>
+        <a href="../index.html#services" class="nav-link" data-translate="nav.services">Export Services</a>
+        <a href="../index.html#certifications" class="nav-link" data-translate="nav.certifications">Certifications</a>
+        <a href="#contact" class="nav-link active" data-translate="nav.contact">Contact</a>
       </div>
 
       <div class="nav-actions">
-        <a href="#contact-form" class="btn btn-primary">Get Quote</a>
+        <div class="language-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ar">العربية</button>
+        </div>
+        <a href="#contact-form" class="btn btn-primary" data-translate="nav.getQuote">Get Quote</a>
         <button class="nav-toggle" id="nav-toggle">
           <i data-lucide="menu"></i>
         </button>
@@ -73,8 +80,8 @@
     <div class="hero-content">
       <div class="container">
         <div class="hero-text">
-          <h1 class="hero-title">Contact ELShahd</h1>
-          <p class="hero-subtitle">
+          <h1 class="hero-title" data-translate="contact.hero.title">Contact ELShahd</h1>
+          <p class="hero-subtitle" data-translate="contact.hero.subtitle">
             Ready to discuss your agricultural import needs? Get in touch with our expert team for personalized service
             and competitive quotes.
           </p>
@@ -87,8 +94,8 @@
   <section class="contact-methods" id="contact">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">
+        <h2 class="section-title" data-translate="contact.methods.title">Get In Touch</h2>
+        <p class="section-subtitle" data-translate="contact.methods.subtitle">
           Multiple ways to reach our team for quotes, inquiries, and support
         </p>
       </div>
@@ -98,19 +105,21 @@
           <div class="method-icon">
             <i data-lucide="phone"></i>
           </div>
-          <h3>Phone</h3>
+          <h3 data-translate="contact.methods.phone.title">Phone</h3>
           <p class="method-detail">+20 10 26074490</p>
-          <p class="method-description">Call us directly for immediate assistance and quick quotes</p>
+          <p class="method-description" data-translate="contact.methods.phone.description">Call us directly for
+            immediate assistance and quick quotes</p>
           <div class="method-actions">
             <a href="tel:+201026074490" class="btn btn-primary">
               <i data-lucide="phone-call"></i>
-              Call Now
+              <span data-translate="contact.methods.phone.action">Call Now</span>
             </a>
           </div>
           <div class="method-hours">
             <small>
               <i data-lucide="clock"></i>
-              Sunday - Thursday: 9:00 AM - 6:00 PM (Cairo Time)
+              <span data-translate="contact.methods.phone.hours">Sunday - Thursday: 9:00 AM - 6:00 PM (Cairo
+                Time)</span>
             </small>
           </div>
         </div>
@@ -119,19 +128,20 @@
           <div class="method-icon">
             <i data-lucide="mail"></i>
           </div>
-          <h3>Email</h3>
+          <h3 data-translate="contact.methods.email.title">Email</h3>
           <p class="method-detail">Info@elshahd-company.com</p>
-          <p class="method-description">Send detailed inquiries and receive comprehensive responses</p>
+          <p class="method-description" data-translate="contact.methods.email.description">Send detailed inquiries and
+            receive comprehensive responses</p>
           <div class="method-actions">
             <a href="mailto:Info@elshahd-company.com" class="btn btn-primary">
               <i data-lucide="send"></i>
-              Send Email
+              <span data-translate="contact.methods.email.action">Send Email</span>
             </a>
           </div>
           <div class="method-hours">
             <small>
               <i data-lucide="clock"></i>
-              Response within 24 hours
+              <span data-translate="contact.methods.email.hours">Response within 24 hours</span>
             </small>
           </div>
         </div>
@@ -140,19 +150,21 @@
           <div class="method-icon">
             <i data-lucide="map-pin"></i>
           </div>
-          <h3>Office Location</h3>
-          <p class="method-detail">71 Al Tajareen Towers<br>Abd El Aziz Hegazy Street<br>New Nozha, Cairo, Egypt</p>
-          <p class="method-description">Visit our office for in-person meetings and consultations</p>
+          <h3 data-translate="contact.methods.office.title">Office Location</h3>
+          <p class="method-detail" data-translate="contact.methods.office.address">71 Al Tajareen Towers<br>Abd El Aziz
+            Hegazy Street<br>New Nozha, Cairo, Egypt</p>
+          <p class="method-description" data-translate="contact.methods.office.description">Visit our office for
+            in-person meetings and consultations</p>
           <div class="method-actions">
             <a href="https://maps.app.goo.gl/MRFic3Cj5KYsYKao7" target="_blank" class="btn btn-primary">
               <i data-lucide="map"></i>
-              View on Map
+              <span data-translate="contact.methods.office.action">View on Map</span>
             </a>
           </div>
           <div class="method-hours">
             <small>
               <i data-lucide="clock"></i>
-              By appointment only
+              <span data-translate="contact.methods.office.hours">By appointment only</span>
             </small>
           </div>
         </div>
@@ -165,8 +177,8 @@
     <div class="container">
       <div class="form-content">
         <div class="form-info">
-          <h2>Request a Quote</h2>
-          <p class="form-intro">
+          <h2 data-translate="contact.form.title">Request a Quote</h2>
+          <p class="form-intro" data-translate="contact.form.intro">
             Fill out our detailed inquiry form to receive a personalized quote for your agricultural import needs. Our
             team will respond with comprehensive information about pricing, availability, and shipping options.
           </p>
@@ -174,25 +186,26 @@
           <div class="form-benefits">
             <div class="benefit-item">
               <i data-lucide="check-circle"></i>
-              <span>Competitive pricing and bulk discounts</span>
+              <span data-translate="contact.form.benefits.pricing">Competitive pricing and bulk discounts</span>
             </div>
             <div class="benefit-item">
               <i data-lucide="check-circle"></i>
-              <span>Detailed product specifications</span>
+              <span data-translate="contact.form.benefits.specifications">Detailed product specifications</span>
             </div>
             <div class="benefit-item">
               <i data-lucide="check-circle"></i>
-              <span>Custom packaging and shipping options</span>
+              <span data-translate="contact.form.benefits.packaging">Custom packaging and shipping options</span>
             </div>
             <div class="benefit-item">
               <i data-lucide="check-circle"></i>
-              <span>Quality certificates and documentation</span>
+              <span data-translate="contact.form.benefits.certificates">Quality certificates and documentation</span>
             </div>
           </div>
 
           <div class="form-support">
-            <h4>Need Help?</h4>
-            <p>Our agricultural experts are here to assist you with product selection and requirements.</p>
+            <h4 data-translate="contact.form.support.title">Need Help?</h4>
+            <p data-translate="contact.form.support.description">Our agricultural experts are here to assist you with
+              product selection and requirements.</p>
             <div class="support-contact">
               <a href="tel:+201026074490" class="support-link">
                 <i data-lucide="phone"></i>
@@ -209,35 +222,36 @@
         <div class="form-container">
           <form class="contact-form" id="contact-form">
             <div class="form-header">
-              <h3>Inquiry Form</h3>
-              <p>Please provide detailed information for accurate quotes</p>
+              <h3 data-translate="contact.form.inquiry.title">Inquiry Form</h3>
+              <p data-translate="contact.form.inquiry.subtitle">Please provide detailed information for accurate quotes
+              </p>
             </div>
 
             <!-- Personal Information -->
             <div class="form-section">
               <h4 class="section-title">
                 <i data-lucide="user"></i>
-                Contact Information
+                <span data-translate="contact.form.sections.contact">Contact Information</span>
               </h4>
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="firstName">First Name *</label>
+                  <label for="firstName" data-translate="contact.form.fields.firstName">First Name *</label>
                   <input type="text" id="firstName" name="firstName" required>
                 </div>
                 <div class="form-group">
-                  <label for="lastName">Last Name *</label>
+                  <label for="lastName" data-translate="contact.form.fields.lastName">Last Name *</label>
                   <input type="text" id="lastName" name="lastName" required>
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="email">Email Address *</label>
+                  <label for="email" data-translate="contact.form.fields.email">Email Address *</label>
                   <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                  <label for="phone">Phone Number</label>
+                  <label for="phone" data-translate="contact.form.fields.phone">Phone Number</label>
                   <input type="tel" id="phone" name="phone">
                 </div>
               </div>
@@ -247,42 +261,48 @@
             <div class="form-section">
               <h4 class="section-title">
                 <i data-lucide="building"></i>
-                Company Information
+                <span data-translate="contact.form.sections.company">Company Information</span>
               </h4>
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="company">Company Name</label>
+                  <label for="company" data-translate="contact.form.fields.company">Company Name</label>
                   <input type="text" id="company" name="company">
                 </div>
                 <div class="form-group">
-                  <label for="position">Your Position</label>
-                  <input type="text" id="position" name="position" placeholder="e.g., Purchasing Manager">
+                  <label for="position" data-translate="contact.form.fields.position">Your Position</label>
+                  <input type="text" id="position" name="position"
+                    data-translate-placeholder="contact.form.placeholders.position"
+                    placeholder="e.g., Purchasing Manager">
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="country">Country *</label>
+                  <label for="country" data-translate="contact.form.fields.country">Country *</label>
                   <input type="text" id="country" name="country" required>
                 </div>
                 <div class="form-group">
-                  <label for="city">City</label>
+                  <label for="city" data-translate="contact.form.fields.city">City</label>
                   <input type="text" id="city" name="city">
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="businessType">Type of Business</label>
+                <label for="businessType" data-translate="contact.form.fields.businessType">Type of Business</label>
                 <select id="businessType" name="businessType">
-                  <option value="">Select Business Type</option>
-                  <option value="livestock-farm">Livestock Farm</option>
-                  <option value="feed-manufacturer">Feed Manufacturer</option>
-                  <option value="distributor">Distributor/Wholesaler</option>
-                  <option value="retailer">Retailer</option>
-                  <option value="importer">Importer</option>
-                  <option value="cooperative">Agricultural Cooperative</option>
-                  <option value="other">Other</option>
+                  <option value="" data-translate="contact.form.options.selectBusiness">Select Business Type</option>
+                  <option value="livestock-farm" data-translate="contact.form.options.livestockFarm">Livestock Farm
+                  </option>
+                  <option value="feed-manufacturer" data-translate="contact.form.options.feedManufacturer">Feed
+                    Manufacturer</option>
+                  <option value="distributor" data-translate="contact.form.options.distributor">Distributor/Wholesaler
+                  </option>
+                  <option value="retailer" data-translate="contact.form.options.retailer">Retailer</option>
+                  <option value="importer" data-translate="contact.form.options.importer">Importer</option>
+                  <option value="cooperative" data-translate="contact.form.options.cooperative">Agricultural Cooperative
+                  </option>
+                  <option value="other" data-translate="contact.form.options.other">Other</option>
                 </select>
               </div>
             </div>
@@ -291,25 +311,25 @@
             <div class="form-section">
               <h4 class="section-title">
                 <i data-lucide="package"></i>
-                Product Requirements
+                <span data-translate="contact.form.sections.products">Product Requirements</span>
               </h4>
 
               <div class="form-group">
-                <label for="products">Products of Interest *</label>
+                <label for="products" data-translate="contact.form.fields.products">Products of Interest *</label>
                 <select id="products" name="products" required>
-                  <option value="">Select Product Category</option>
-                  <optgroup label="Animal Feed (Primary - 80%)">
-                    <option value="straw">Premium Straw</option>
-                    <option value="alfalfa">Dried Alfalfa</option>
-                    <option value="hay">Premium Hay</option>
-                    <option value="chaff">Quality Chaff</option>
+                  <option value="" data-translate="contact.form.options.selectProduct">Select Product Category</option>
+                  <optgroup label="Animal Feed (Primary - 80%)" data-translate="contact.form.optgroups.animalFeed">
+                    <option value="straw" data-translate="contact.form.options.straw">Premium Straw</option>
+                    <option value="alfalfa" data-translate="contact.form.options.alfalfa">Dried Alfalfa</option>
+                    <option value="hay" data-translate="contact.form.options.hay">Premium Hay</option>
+                    <option value="chaff" data-translate="contact.form.options.chaff">Quality Chaff</option>
                   </optgroup>
-                  <optgroup label="Fresh Fruits (Secondary - 20%)">
-                    <option value="citrus">Premium Citrus</option>
-                    <option value="seasonal">Seasonal Fruits</option>
+                  <optgroup label="Fresh Fruits (Secondary - 20%)" data-translate="contact.form.optgroups.freshFruits">
+                    <option value="citrus" data-translate="contact.form.options.citrus">Premium Citrus</option>
+                    <option value="seasonal" data-translate="contact.form.options.seasonal">Seasonal Fruits</option>
                   </optgroup>
-                  <option value="multiple">Multiple Products</option>
-                  <option value="custom">Custom Requirements</option>
+                  <option value="multiple" data-translate="contact.form.options.multiple">Multiple Products</option>
+                  <option value="custom" data-translate="contact.form.options.custom">Custom Requirements</option>
                 </select>
               </div>
 
@@ -600,16 +620,38 @@
               </li>
             </ul>
           </div>
+
+          <div class="footer-column">
+            <h4 class="footer-title" data-translate="footer.social">Follow Us</h4>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/company/el-shahd-company/" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="LinkedIn">
+                <i data-lucide="linkedin"></i>
+              </a>
+              <a href="https://web.facebook.com/elshahd200" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="Facebook">
+                <i data-lucide="facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/el_shahd_company/" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="Instagram">
+                <i data-lucide="instagram"></i>
+              </a>
+              <a href="https://www.youtube.com/channel/UCUBsBpSyLsjNb6MSfwDb_1Q" target="_blank"
+                rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+                <i data-lucide="youtube"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div class="footer-copyright">
-          <p>&copy; 2025 ELShahd Company. All rights reserved.</p>
+          <p data-translate="footer.copyright">&copy; 2025 ELShahd Company. All rights reserved.</p>
         </div>
         <div class="footer-legal">
-          <a href="#" class="footer-legal-link">Privacy Policy</a>
-          <a href="#" class="footer-legal-link">Terms of Service</a>
+          <a href="#" class="footer-legal-link" data-translate="footer.privacy">Privacy Policy</a>
+          <a href="#" class="footer-legal-link" data-translate="footer.terms">Terms of Service</a>
         </div>
       </div>
     </div>
