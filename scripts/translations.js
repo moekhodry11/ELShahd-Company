@@ -18,7 +18,7 @@ const translations = {
       title:
         'Premium <span class="text-accent">Animal Feed</span> & Agricultural Exports',
       subtitle:
-        "Leading Egyptian exporter of high-quality straw, dried alfalfa, hay, chaff, and fresh fruits to global markets. Your trusted partner in agricultural excellence.",
+        "ELShahd Company for Supply and Export of Agricultural Products and Animal Feed. Leading Egyptian exporter specializing in Hejazi hay, wheat straw, corn, and premium animal feed to global markets.",
       cta: "View Our Products",
       stats: {
         experience: "Years of Excellence",
@@ -56,6 +56,9 @@ const translations = {
     // Products Section
     products: {
       badge: "Our Products",
+      productBadge: {
+        bestSeller: "Best Seller",
+      },
       title: "Premium Animal Feed & Fresh Produce",
       subtitle:
         "Discover our comprehensive range of high-quality agricultural products, carefully selected and processed to meet international standards.",
@@ -63,37 +66,44 @@ const translations = {
       categories: {
         animalFeed: "Animal Feed",
         fruits: "Fresh Fruits",
+        primaryFocus: "Primary Focus - 80%",
+        secondaryFocus: "Secondary Focus - 20%",
       },
       items: {
-        straw: {
-          title: "Premium Straw",
+        hejazi_hay: {
+          title: "Hejazi Hay",
           description:
-            "High-quality wheat and rice straw, perfect for livestock bedding and feed supplement.",
+            "Premium Hejazi hay available in large bales (3800 EGP/ton) and small bales (3300 EGP/ton). High-quality feed for livestock.",
+          price: "3300-3800 EGP/ton",
         },
-        alfalfa: {
-          title: "Dried Alfalfa",
+        wheat_straw: {
+          title: "Wheat Straw",
           description:
-            "Nutrient-rich dried alfalfa, excellent source of protein and fiber for livestock.",
+            "Premium wheat straw in large bales (2100 EGP/ton). Essential bedding and feed supplement for cattle and horses.",
+          price: "2100 EGP/ton",
         },
-        hay: {
-          title: "Premium Hay",
+        coarse_bran: {
+          title: "Coarse Bran",
           description:
-            "Top-grade hay varieties providing essential nutrition for cattle and horses.",
+            "High-quality loose coarse bran (3100 EGP/ton). Rich in fiber and nutrients, perfect for livestock feed mixing.",
+          price: "3100 EGP/ton",
         },
-        chaff: {
-          title: "Quality Chaff",
+        argentine_corn: {
+          title: "Argentine Corn",
           description:
-            "Fine chaff perfect for mixing with other feeds and improving digestibility.",
+            "Premium Argentine corn in bags (3450 EGP/ton). High-energy feed grain ideal for poultry and livestock.",
+          price: "3450 EGP/ton",
         },
-        citrus: {
-          title: "Premium Citrus",
+        brazilian_corn: {
+          title: "Brazilian Corn",
           description:
-            "Fresh oranges, lemons, and other citrus fruits from Egyptian orchards.",
+            "Quality Brazilian corn in bags (3450 EGP/ton). Excellent source of carbohydrates and energy for animal feed.",
+          price: "3450 EGP/ton",
         },
         seasonal: {
           title: "Seasonal Fruits",
           description:
-            "A variety of seasonal fruits including grapes, pomegranates, and dates.",
+            "A variety of seasonal fruits including grapes, pomegranates, and dates for export markets.",
         },
       },
     },
@@ -136,22 +146,56 @@ const translations = {
             "In-depth market analysis and insights for informed business decisions.",
         },
       ],
+      features: {
+        qualityControl: [
+          "Pre-shipment inspection",
+          "Quality certificates",
+          "Lab testing reports",
+        ],
+        logistics: [
+          "Container shipping",
+          "Bulk cargo handling",
+          "Door-to-door delivery",
+        ],
+        documentation: [
+          "Export licenses",
+          "Customs clearance",
+          "Phytosanitary certificates",
+        ],
+      },
     },
 
     // Certifications Section
     certifications: {
       badge: "Certifications",
-      title: "International Quality Standards",
-      subtitle:
-        "Our commitment to excellence is reflected in our comprehensive certifications and quality assurance programs.",
+      title: "Certifications & Standards",
+      subtitle: "Meeting international quality and safety standards",
+      heading: "Quality You Can Trust",
+      description:
+        "ELShahd maintains the highest standards of quality and safety in all our operations. Our products are certified and compliant with international agricultural export standards.",
       items: [
-        "ISO 22000 Food Safety Management",
-        "HACCP Certified Processes",
-        "Organic Certification",
-        "Export Quality Certification",
-        "Phytosanitary Certificates",
-        "Certificate of Origin",
+        {
+          title: "ISO Quality Management",
+          description: "ISO 9001:2015 certified quality management system",
+        },
+        {
+          title: "HACCP Compliance",
+          description: "Hazard Analysis Critical Control Points certified",
+        },
+        {
+          title: "Organic Certification",
+          description: "Certified organic products available",
+        },
+        {
+          title: "Export Compliance",
+          description: "Compliant with international export regulations",
+        },
       ],
+      stats: {
+        qualityTested: "Quality Tested",
+        exportMarkets: "Export Markets",
+        yearsExperience: "Years Experience",
+      },
     },
 
     // Contact Section
@@ -162,9 +206,11 @@ const translations = {
         "Ready to explore premium agricultural products? Get in touch with our expert team for personalized solutions and competitive pricing.",
       cta: "Send Inquiry",
       info: {
-        address: "Cairo, Egypt",
-        phone: "+20 123 456 7890",
-        email: "info@elshahd-exports.com",
+        address: "71 Al Tojareen Towers, New Nozha, Cairo, Egypt",
+        phone: "+20 109 675 4864",
+        phone2: "+20 127 631 9835",
+        email: "info@elshahd-company.com",
+        website: "www.elshahd.company.com",
         hours: "Sunday - Thursday: 9:00 AM - 6:00 PM",
       },
       form: {
@@ -208,8 +254,7 @@ const translations = {
         },
         office: {
           title: "Office Location",
-          address:
-            "71 Al Tajareen Towers<br>Abd El Aziz Hegazy Street<br>New Nozha, Cairo, Egypt",
+          address: "71 Al Tojareen Towers<br>New Nozha, Cairo, Egypt",
           description:
             "Visit our office for in-person meetings and consultations",
           action: "View on Map",
@@ -352,6 +397,39 @@ const translations = {
       },
     },
 
+    // Pricing Section
+    pricing: {
+      title: "Current Pricing (EGP/Ton)",
+      subtitle:
+        "Updated prices as of September 2019. Contact us for latest rates.",
+      table: {
+        item: "Product",
+        type: "Package Type",
+        price: "Price (EGP/Ton)",
+      },
+      package: {
+        largeBales: "Large Bales",
+        smallBales: "Small Bales",
+        loose: "Loose",
+        bags: "Bags",
+      },
+      note: "<strong>Note:</strong> Prices subject to change based on market conditions. Contact us for current quotes and bulk pricing.",
+    },
+
+    // Features
+    features: {
+      clean: "Clean",
+      gradeA: "Grade A",
+      nutritious: "Nutritious",
+      premiumQuality: "Premium Quality",
+      bagged: "Bagged",
+      highEnergy: "High Energy",
+      fresh: "Fresh",
+      exportQuality: "Export Quality",
+      seasonal: "Seasonal",
+      premium: "Premium",
+    },
+
     // Footer
     footer: {
       description:
@@ -394,7 +472,7 @@ const translations = {
       title:
         'أعلاف <span class="text-accent">حيوانية</span> وصادرات زراعية متميزة',
       subtitle:
-        "شركة مصرية رائدة في تصدير القش والبرسيم المجفف والتبن والتبن المفروم والفواكه الطازجة عالية الجودة إلى الأسواق العالمية. شريكك الموثوق في التميز الزراعي.",
+        "شركة الشهد لتوريد وتصدير الحاصلات الزراعية والأعلاف الحيوانية. شركة مصرية رائدة متخصصة في الدريس الحجازي وتبن القمح والذرة والأعلاف الحيوانية المتميزة للأسواق العالمية.",
       cta: "اعرض منتجاتنا",
       stats: {
         experience: "سنوات من التميز",
@@ -430,6 +508,9 @@ const translations = {
     // Products Section
     products: {
       badge: "منتجاتنا",
+      productBadge: {
+        bestSeller: "الأكثر مبيعاً",
+      },
       title: "أعلاف حيوانية متميزة ومنتجات طازجة",
       subtitle:
         "اكتشف مجموعتنا الشاملة من المنتجات الزراعية عالية الجودة، المختارة والمعالجة بعناية لتلبية المعايير الدولية.",
@@ -437,36 +518,44 @@ const translations = {
       categories: {
         animalFeed: "أعلاف حيوانية",
         fruits: "فواكه طازجة",
+        primaryFocus: "التركيز الأساسي - 80%",
+        secondaryFocus: "التركيز الثانوي - 20%",
       },
       items: {
-        straw: {
-          title: "قش متميز",
+        hejazi_hay: {
+          title: "دريس حجازي",
           description:
-            "قش قمح وأرز عالي الجودة، مثالي لفراش الماشية ومكمل غذائي.",
+            "دريس حجازي متميز متوفر في بالات كبيرة (3800 جنيه/طن) وبالات صغيرة (3300 جنيه/طن). علف عالي الجودة للماشية.",
+          price: "3300-3800 جنيه/طن",
         },
-        alfalfa: {
-          title: "برسيم مجفف",
+        wheat_straw: {
+          title: "تبن قمح",
           description:
-            "برسيم مجفف غني بالعناصر الغذائية، مصدر ممتاز للبروتين والألياف للماشية.",
+            "تبن قمح متميز في بالات كبيرة (2100 جنيه/طن). فراش ومكمل غذائي أساسي للأبقار والخيول.",
+          price: "2100 جنيه/طن",
         },
-        hay: {
-          title: "تبن متميز",
+        coarse_bran: {
+          title: "ردة خشنة",
           description:
-            "أصناف تبن عالية الجودة توفر التغذية الأساسية للأبقار والخيول.",
+            "ردة خشنة عالية الجودة معبأة (3100 جنيه/طن). غني بالألياف والعناصر الغذائية، مثالي لخلط أعلاف الماشية.",
+          price: "3100 جنيه/طن",
         },
-        chaff: {
-          title: "تبن مفروم عالي الجودة",
+        argentine_corn: {
+          title: "ذرة أرجنتيني",
           description:
-            "تبن مفروم ناعم مثالي للخلط مع الأعلاف الأخرى وتحسين الهضم.",
+            "ذرة أرجنتيني متميزة في أكياس (3450 جنيه/طن). حبوب علف عالية الطاقة مثالية للدواجن والماشية.",
+          price: "3450 جنيه/طن",
         },
-        citrus: {
-          title: "حمضيات متميزة",
-          description: "برتقال وليمون وحمضيات أخرى طازجة من البساتين المصرية.",
+        brazilian_corn: {
+          title: "ذرة برازيلي",
+          description:
+            "ذرة برازيلي عالية الجودة في أكياس (3450 جنيه/طن). مصدر ممتاز للكربوهيدرات والطاقة لأعلاف الحيوان.",
+          price: "3450 جنيه/طن",
         },
         seasonal: {
           title: "فواكه موسمية",
           description:
-            "مجموعة متنوعة من الفواكه الموسمية تشمل العنب والرمان والتمر.",
+            "مجموعة متنوعة من الفواكه الموسمية تشمل العنب والرمان والتمر لأسواق التصدير.",
         },
       },
     },
@@ -503,22 +592,56 @@ const translations = {
           description: "تحليل عميق للسوق ورؤى لاتخاذ قرارات تجارية مدروسة.",
         },
       ],
+      features: {
+        qualityControl: [
+          "فحص ما قبل الشحن",
+          "شهادات الجودة",
+          "تقارير الاختبارات المعملية",
+        ],
+        logistics: [
+          "شحن بالحاويات",
+          "مناولة البضائع السائبة",
+          "التسليم من الباب إلى الباب",
+        ],
+        documentation: [
+          "تراخيص التصدير",
+          "التخليص الجمركي",
+          "شهادات صحة نباتية",
+        ],
+      },
     },
 
     // Certifications Section
     certifications: {
       badge: "الشهادات",
-      title: "معايير الجودة الدولية",
-      subtitle:
-        "التزامنا بالتميز ينعكس في شهاداتنا الشاملة وبرامج ضمان الجودة.",
+      title: "الشهادات والمعايير",
+      subtitle: "تلبية معايير الجودة والسلامة الدولية",
+      heading: "جودة يمكنك الوثوق بها",
+      description:
+        "تحافظ شركة الشهد على أعلى معايير الجودة والسلامة في جميع عملياتنا. منتجاتنا معتمدة ومتوافقة مع معايير التصدير الزراعي الدولية.",
       items: [
-        "نظام إدارة سلامة الغذاء ISO 22000",
-        "عمليات معتمدة من HACCP",
-        "شهادة عضوية",
-        "شهادة جودة التصدير",
-        "شهادات صحة نباتية",
-        "شهادة منشأ",
+        {
+          title: "إدارة الجودة ISO",
+          description: "نظام إدارة الجودة المعتمد ISO 9001:2015",
+        },
+        {
+          title: "امتثال HACCP",
+          description: "معتمد لتحليل المخاطر ونقاط التحكم الحرجة",
+        },
+        {
+          title: "الشهادة العضوية",
+          description: "منتجات عضوية معتمدة متاحة",
+        },
+        {
+          title: "امتثال التصدير",
+          description: "متوافق مع لوائح التصدير الدولية",
+        },
       ],
+      stats: {
+        qualityTested: "مختبر الجودة",
+        exportMarkets: "أسواق التصدير",
+        yearsExperience: "سنوات الخبرة",
+      },
     },
 
     // Contact Section
@@ -529,9 +652,11 @@ const translations = {
         "مستعد لاستكشاف المنتجات الزراعية المتميزة؟ تواصل مع فريق الخبراء لدينا للحصول على حلول مخصصة وأسعار تنافسية.",
       cta: "أرسل استفسار",
       info: {
-        address: "القاهرة، مصر",
-        phone: "+20 123 456 7890",
-        email: "info@elshahd-exports.com",
+        address: "71 أبراج التجاريين، النزهة الجديدة، القاهرة، مصر",
+        phone: "+20 109 675 4864",
+        phone2: "+20 127 631 9835",
+        email: "info@elshahd-company.com",
+        website: "www.elshahd.company.com",
         hours: "الأحد - الخميس: 9:00 ص - 6:00 م",
       },
       form: {
@@ -546,6 +671,39 @@ const translations = {
         submit: "أرسل الرسالة",
         success: "شكراً لك! سنعاود الاتصال بك خلال 24 ساعة.",
       },
+    },
+
+    // Pricing Section
+    pricing: {
+      title: "الأسعار الحالية (جنيه/طن)",
+      subtitle:
+        "أسعار محدثة حتى سبتمبر 2019. تواصل معنا للحصول على آخر الأسعار.",
+      table: {
+        item: "المنتج",
+        type: "نوع العبوة",
+        price: "السعر (جنيه/طن)",
+      },
+      package: {
+        largeBales: "بالات كبيرة",
+        smallBales: "بالات صغيرة",
+        loose: "معبأة",
+        bags: "أكياس",
+      },
+      note: "<strong>ملحوظة:</strong> الأسعار قابلة للتغيير حسب ظروف السوق. تواصل معنا للحصول على عروض أسعار حديثة وأسعار الجملة.",
+    },
+
+    // Features
+    features: {
+      clean: "نظيف",
+      gradeA: "درجة أولى",
+      nutritious: "مغذي",
+      premiumQuality: "جودة متميزة",
+      bagged: "معبأ",
+      highEnergy: "عالي الطاقة",
+      fresh: "طازج",
+      exportQuality: "جودة تصدير",
+      seasonal: "موسمي",
+      premium: "متميز",
     },
 
     // Footer

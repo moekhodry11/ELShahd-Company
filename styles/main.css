@@ -609,9 +609,116 @@ section {
   font-weight: 500;
 }
 
+/* Product Pricing Styles */
+.product-price {
+  margin: 12px 0;
+  padding: 8px 0;
+  border-top: 1px solid #e6ede4;
+  border-bottom: 1px solid #e6ede4;
+}
+
+.price-single {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2e7d32;
+  background: #e8f3e8;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.price-range {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2e7d32;
+  background: #e8f3e8;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
 .products-cta {
   text-align: center;
   margin-top: 48px;
+}
+
+/* Pricing Table Styles */
+.pricing-section {
+  margin-top: 64px;
+  padding: 32px;
+  background: #f8faf8;
+  border-radius: 16px;
+  border: 1px solid #e6ede4;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.pricing-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+.pricing-subtitle {
+  color: #67766b;
+  font-size: 14px;
+}
+
+.pricing-table-container {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(16, 33, 19, 0.1);
+}
+
+.pricing-table {
+  width: 100%;
+  background: #ffffff;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.pricing-table th {
+  background: #2e7d32;
+  color: #ffffff;
+  padding: 16px;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid #276b2a;
+}
+
+.pricing-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e6ede4;
+  color: #3a4a3f;
+}
+
+.pricing-table tbody tr:hover {
+  background: #f8faf8;
+}
+
+.pricing-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.price-cell {
+  font-weight: 600;
+  color: #2e7d32;
+  text-align: right;
+}
+
+.pricing-note {
+  margin-top: 24px;
+  padding: 16px;
+  background: #fff3e0;
+  border: 1px solid #ffcc80;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #e65100;
 }
 
 /* Services Section */
