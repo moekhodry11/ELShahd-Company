@@ -353,7 +353,7 @@ html[lang="ar"] .nav-actions .language-switcher {
   max-width: 900px;
   text-align: center;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
   border-radius: 24px;
   padding: 48px 40px;
@@ -1056,6 +1056,7 @@ section {
 }
 
 @media (max-width: 768px) {
+  /* Mobile navigation fixes */
   .nav-menu {
     position: fixed;
     top: 72px;
@@ -1087,6 +1088,85 @@ section {
 
   .nav-toggle {
     display: block;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    margin: 0;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    position: relative;
+    z-index: 1002;
+  }
+
+  .nav-toggle:hover {
+    background: rgba(46, 125, 50, 0.1);
+    color: #2e7d32;
+  }
+
+  .nav-toggle:active {
+    transform: scale(0.95);
+  }
+
+  /* Mobile button size fixes */
+  .btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .btn-sm {
+    padding: 8px 12px;
+    font-size: 13px;
+    min-height: 40px;
+  }
+
+  .nav-actions .btn {
+    padding: 8px 14px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  /* Language switcher mobile optimization */
+  .lang-btn {
+    min-width: 42px;
+    min-height: 42px;
+  }
+
+  /* Show only Arabic initial on mobile */
+  .lang-btn[data-lang="ar"] .lang-text {
+    display: none;
+  }
+
+  .lang-btn[data-lang="ar"]::after {
+    content: "ع";
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  /* Prevent layout shift on mobile */
+  .nav-container {
+    padding: 0 12px;
+  }
+
+  /* Improved mobile nav brand */
+  .nav-brand-text {
+    font-size: 20px;
+  }
+
+  .nav-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Mobile hero adjustments */
+  .hero-actions .btn {
+    padding: 12px 18px;
+    font-size: 15px;
+    min-width: auto;
   }
 
   .hero-title {
@@ -1146,7 +1226,53 @@ section {
   }
 }
 
+/* Extra small screens optimization */
 @media (max-width: 480px) {
+  .nav-container {
+    padding: 0 8px;
+  }
+
+  .nav-actions {
+    gap: 6px;
+  }
+
+  .nav-actions .btn {
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+
+  .lang-btn {
+    min-width: 36px;
+    min-height: 36px;
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .nav-toggle {
+    min-width: 38px;
+    min-height: 38px;
+    padding: 8px;
+  }
+
+  .nav-brand-text {
+    font-size: 18px;
+  }
+
+  .nav-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-text {
+    padding: 32px 20px;
+    margin: 0 12px;
+  }
+
   .container {
     padding: 0 16px;
   }

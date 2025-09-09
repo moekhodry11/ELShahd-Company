@@ -17,37 +17,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Navigation functionality
 function initializeNavigation() {
-  // Mobile menu toggle
-  navToggle.addEventListener("click", function () {
-    navMenu.classList.toggle("active");
+  // Mobile menu toggle with improved reliability
+  navToggle.addEventListener("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
 
-    // Toggle hamburger icon
-    const icon = navToggle.querySelector("[data-lucide]");
-    if (navMenu.classList.contains("active")) {
-      icon.setAttribute("data-lucide", "x");
+    // Toggle menu state
+    const isActive = navMenu.classList.contains("active");
+
+    if (isActive) {
+      closeNavMenu();
     } else {
-      icon.setAttribute("data-lucide", "menu");
+      openNavMenu();
     }
-    lucide.createIcons();
+  });
+
+  // Touch events for better mobile responsiveness
+  navToggle.addEventListener("touchstart", function (e) {
+    e.preventDefault();
+    this.style.transform = "scale(0.95)";
+  });
+
+  navToggle.addEventListener("touchend", function (e) {
+    e.preventDefault();
+    this.style.transform = "scale(1)";
   });
 
   // Close mobile menu when clicking on links
   navLinks.forEach((link) => {
     link.addEventListener("click", function () {
-      navMenu.classList.remove("active");
-      const icon = navToggle.querySelector("[data-lucide]");
-      icon.setAttribute("data-lucide", "menu");
-      lucide.createIcons();
+      closeNavMenu();
     });
   });
 
   // Close mobile menu when clicking outside
   document.addEventListener("click", function (e) {
-    if (!navbar.contains(e.target)) {
-      navMenu.classList.remove("active");
-      const icon = navToggle.querySelector("[data-lucide]");
-      icon.setAttribute("data-lucide", "menu");
-      lucide.createIcons();
+    if (!navbar.contains(e.target) && navMenu.classList.contains("active")) {
+      closeNavMenu();
+    }
+  });
+
+  // Close mobile menu on escape key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && navMenu.classList.contains("active")) {
+      closeNavMenu();
     }
   });
 
@@ -447,9 +460,32 @@ function initializeFormEnhancements() {
 // Initialize form enhancements when page loads
 document.addEventListener("DOMContentLoaded", initializeFormEnhancements);
 
+// Navigation helper functions
+function openNavMenu() {
+  navMenu.classList.add("active");
+  const icon = navToggle.querySelector("[data-lucide]");
+  icon.setAttribute("data-lucide", "x");
+  lucide.createIcons();
+
+  // Prevent body scroll on mobile when menu is open
+  document.body.style.overflow = "hidden";
+}
+
+function closeNavMenu() {
+  navMenu.classList.remove("active");
+  const icon = navToggle.querySelector("[data-lucide]");
+  icon.setAttribute("data-lucide", "menu");
+  lucide.createIcons();
+
+  // Restore body scroll
+  document.body.style.overflow = "";
+}
+
 // Export functions for potential external use
 window.ELShahdWebsite = {
   showNotification,
   trackEvent,
   openImageModal,
+  openNavMenu,
+  closeNavMenu,
 };
